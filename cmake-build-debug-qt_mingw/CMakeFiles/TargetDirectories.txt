@@ -1,0 +1,9 @@
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/Design.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/edit_cache.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/rebuild_cache.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/list_install_components.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/install.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/install/local.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/install/strip.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/Design_autogen_timestamp_deps.dir
+D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw/CMakeFiles/Design_autogen.dir

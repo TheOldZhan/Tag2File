@@ -1,0 +1,13 @@
+"C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S D:\Projects\Cpp\Design -B D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
+CMake Warning (dev) at D:/Qt/6.8.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:3721 (message):
+  The FILENAME_VARIABLE keyword is deprecated and will be removed soon.
+  Please use OUTPUT_SCRIPT instead.
+Call Stack (most recent call first):
+  D:/Qt/6.8.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:3831 (qt6_generate_deploy_app_script)
+  CMakeLists.txt:34 (qt_generate_deploy_app_script)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Configuring done (0.9s)
+-- Generating done (0.5s)
+-- Build files have been written to: D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw

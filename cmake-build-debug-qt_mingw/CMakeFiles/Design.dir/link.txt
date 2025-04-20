@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2024.2.3\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Design.dir/objects.a
+D:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\Design.dir/objects.a @CMakeFiles\Design.dir\objects1.rsp
+D:\Qt\Tools\mingw1310_64\bin\c++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\Design.dir/objects.a -Wl,--no-whole-archive -o Design.exe -Wl,--out-implib,libDesign.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Design.dir\linkLibs.rsp
