@@ -51,7 +51,7 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
         for (const auto& val : jsonArray)
         {
             QJsonObject obj = val.toObject();
-            if (QString filePath = obj["path"].toString(); QFileInfo(filePath).exists())
+            if (QString filePath = obj["path"].toString(); QFileInfo::exists(filePath))
             {
                 FileInfo info = FileInfo::fromJson(obj);
                 fileList.push_back(info);
@@ -88,12 +88,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::Add2leftList(FileInfo& info) const
 {
-    const QString displayText = QString("%1 (%2)").arg(info.getName()).arg(info.getType());
+    const QString displayText = QString("%1 (%2)").arg(info.getName(), info.getType());
     const auto item = new QStandardItem(displayText);
     item->setData(info.getPath(), Qt::UserRole);
     item->setFlags(item->flags() & ~Qt::ItemIsEditable);
     const QString tags = info.getTags().join(", ");
-    item->setToolTip(QString("添加时间: %1\n标签: %2").arg(info.getAddedDatetime()).arg(tags));
+    item->setToolTip(QString("添加时间: %1\n标签: %2").arg(info.getAddedDatetime(), tags));
 
     if (const auto model = qobject_cast<QStandardItemModel*>(ui->RecordedFiles->model())) model->appendRow(item);
 }
@@ -148,8 +148,7 @@ void MainWindow::RemoveAFile(const QString& s)
     {
         QMessageBox::critical(this, "错误",
                               QString("无法删除文件：%1\n错误：%2")
-                              .arg(s)
-                              .arg(file.errorString()));
+                              .arg(s, file.errorString()));
         return;
     }
     if (isUserDataExist())
@@ -295,7 +294,7 @@ void MainWindow::SearchTargetFiles()
         }
         if (match)
         {
-            QString displayText = QString("%1 (%2)").arg(fileInfo.getName()).arg(fileInfo.getType());
+            QString displayText = QString("%1 (%2)").arg(fileInfo.getName(), fileInfo.getType());
             Add2rightList(displayText, fileInfo.getPath());
         }
     }
@@ -459,7 +458,7 @@ void MainWindow::onAddTagClicked()
             {
                 QStandardItem* item = model->itemFromIndex(index);
                 const QString tags = it->getTags().join(", ");
-                item->setToolTip(QString("添加时间: %1\n标签: %2").arg(it->getAddedDatetime()).arg(tags));
+                item->setToolTip(QString("添加时间: %1\n标签: %2").arg(it->getAddedDatetime(), tags));
             }
             saveToJson();
         }
@@ -484,4 +483,4 @@ void MainWindow::onRightSelectionChanged(const QItemSelection& selected, const Q
     }
 }
 
-bool isUserDataExist();
+

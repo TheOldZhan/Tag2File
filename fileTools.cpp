@@ -8,7 +8,7 @@ Datetime::Datetime(bool cond)
     if (cond)
     {
         time_t time64 = time(nullptr);
-        tm tm_buf;
+        tm tm_buf{};
         localtime_s(&tm_buf, &time64);
         std::ostringstream dateStream;
         dateStream << std::setfill('0')
