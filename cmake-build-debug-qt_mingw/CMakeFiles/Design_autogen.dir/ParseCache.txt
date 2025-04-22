@@ -412,8 +412,8 @@ D:/Projects/Cpp/Design/mainwindow.h
  mdp:D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h
  uic:ui_mainwindow.h
 D:/Projects/Cpp/Design/fileinfo.cpp
+D:/Projects/Cpp/Design/main.cpp
 D:/Projects/Cpp/Design/mainwindow.cpp
  uic:ui_mainwindow.h
-D:/Projects/Cpp/Design/main.cpp
 D:/Projects/Cpp/Design/fileTools.h
 D:/Projects/Cpp/Design/fileTools.cpp

@@ -8,6 +8,6 @@ Call Stack (most recent call first):
   CMakeLists.txt:34 (qt_generate_deploy_app_script)
 This warning is for project developers.  Use -Wno-dev to suppress it.
 
--- Configuring done (0.9s)
--- Generating done (0.5s)
+-- Configuring done (0.4s)
+-- Generating done (0.3s)
 -- Build files have been written to: D:/Projects/Cpp/Design/cmake-build-debug-qt_mingw

@@ -18,7 +18,9 @@
 MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    //搜索模式
     ui->SearchContent->addItems({"搜索名字", "搜索标签"});
+    //设置列表的模型
     const auto leftModel = new QStandardItemModel(this);
     ui->RecordedFiles->setModel(leftModel);
     const auto filteredModel = new QStandardItemModel(this);
@@ -27,9 +29,11 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->BrowseBT->setToolTip("从选定目录添加文件");
     ui->AddBT->setToolTip("选择一个文件添加");
     ui->ClearLBT->setToolTip("清空导入的文件");
+    ui->DeleteSelectedItem->setToolTip("删除选中的文件");
     ui->ClearRBT->setToolTip("清空搜索结果");
     ui->OpenFileBT->setToolTip("打开选定的文件所在目录");
     ui->SearchStart->setToolTip("点击搜索");
+    //给列表项添加右键菜单
     listContextMenu = new QMenu(this);
     addTagAction = new QAction("添加标签", this);
     listContextMenu->addAction(addTagAction);
@@ -77,8 +81,10 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
     connect(ui->FilteredFiles->selectionModel(),
             &QItemSelectionModel::selectionChanged, this,
             &MainWindow::onRightSelectionChanged);
-    connect(addTagAction, &QAction::triggered, this, &MainWindow::onAddTagClicked);
     connect(ui->RecordedFiles, &QListView::customContextMenuRequested, this, &MainWindow::showListContextMenu);
+    //添加右键菜单
+    connect(addTagAction, &QAction::triggered, this, &MainWindow::onAddTagClicked);
+
 }
 
 MainWindow::~MainWindow()

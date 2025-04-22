@@ -174,6 +174,19 @@ Design/fast:
 .PHONY : Design/fast
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named Design_autogen_timestamp_deps
 
 # Build rule for target.
@@ -198,6 +211,32 @@ Design_autogen: cmake_check_build_system
 Design_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_autogen.dir\build.make CMakeFiles/Design_autogen.dir/build
 .PHONY : Design_autogen/fast
+
+#=============================================================================
+# Target rules for targets named main_autogen_timestamp_deps
+
+# Build rule for target.
+main_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main_autogen_timestamp_deps
+.PHONY : main_autogen_timestamp_deps
+
+# fast build rule for target.
+main_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen_timestamp_deps.dir\build.make CMakeFiles/main_autogen_timestamp_deps.dir/build
+.PHONY : main_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named main_autogen
+
+# Build rule for target.
+main_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main_autogen
+.PHONY : main_autogen
+
+# fast build rule for target.
+main_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen.dir\build.make CMakeFiles/main_autogen.dir/build
+.PHONY : main_autogen/fast
 
 Design_autogen/mocs_compilation.obj: Design_autogen/mocs_compilation.cpp.obj
 .PHONY : Design_autogen/mocs_compilation.obj
@@ -253,6 +292,7 @@ main.obj: main.cpp.obj
 # target to build an object file
 main.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design.dir\build.make CMakeFiles/Design.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -261,6 +301,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design.dir\build.make CMakeFiles/Design.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -269,7 +310,32 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design.dir\build.make CMakeFiles/Design.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+main_autogen/mocs_compilation.obj: main_autogen/mocs_compilation.cpp.obj
+.PHONY : main_autogen/mocs_compilation.obj
+
+# target to build an object file
+main_autogen/mocs_compilation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.obj
+.PHONY : main_autogen/mocs_compilation.cpp.obj
+
+main_autogen/mocs_compilation.i: main_autogen/mocs_compilation.cpp.i
+.PHONY : main_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+main_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.i
+.PHONY : main_autogen/mocs_compilation.cpp.i
+
+main_autogen/mocs_compilation.s: main_autogen/mocs_compilation.cpp.s
+.PHONY : main_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+main_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main_autogen/mocs_compilation.cpp.s
+.PHONY : main_autogen/mocs_compilation.cpp.s
 
 mainwindow.obj: mainwindow.cpp.obj
 .PHONY : mainwindow.obj
@@ -309,7 +375,10 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Design_autogen
 	@echo ... Design_autogen_timestamp_deps
+	@echo ... main_autogen
+	@echo ... main_autogen_timestamp_deps
 	@echo ... Design
+	@echo ... main
 	@echo ... Design_autogen/mocs_compilation.obj
 	@echo ... Design_autogen/mocs_compilation.i
 	@echo ... Design_autogen/mocs_compilation.s
@@ -319,6 +388,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... main_autogen/mocs_compilation.obj
+	@echo ... main_autogen/mocs_compilation.i
+	@echo ... main_autogen/mocs_compilation.s
 	@echo ... mainwindow.obj
 	@echo ... mainwindow.i
 	@echo ... mainwindow.s

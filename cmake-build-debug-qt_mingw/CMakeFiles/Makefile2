@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw
 
 # The main recursive "all" target.
 all: CMakeFiles/Design.dir/all
+all: CMakeFiles/main.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,8 +72,11 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Design.dir/clean
+clean: CMakeFiles/main.dir/clean
 clean: CMakeFiles/Design_autogen_timestamp_deps.dir/clean
 clean: CMakeFiles/Design_autogen.dir/clean
+clean: CMakeFiles/main_autogen_timestamp_deps.dir/clean
+clean: CMakeFiles/main_autogen.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -101,6 +105,33 @@ Design: CMakeFiles/Design.dir/rule
 CMakeFiles/Design.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design.dir\build.make CMakeFiles/Design.dir/clean
 .PHONY : CMakeFiles/Design.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/main.dir
+
+# All Build rule for target.
+CMakeFiles/main.dir/all: CMakeFiles/main_autogen.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/main_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles --progress-num=8,9,10,11 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles 0
+.PHONY : CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: CMakeFiles/main.dir/rule
+.PHONY : main
+
+# clean rule for target.
+CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Design_autogen_timestamp_deps.dir
@@ -153,6 +184,58 @@ Design_autogen: CMakeFiles/Design_autogen.dir/rule
 CMakeFiles/Design_autogen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_autogen.dir\build.make CMakeFiles/Design_autogen.dir/clean
 .PHONY : CMakeFiles/Design_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/main_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+CMakeFiles/main_autogen_timestamp_deps.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen_timestamp_deps.dir\build.make CMakeFiles/main_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen_timestamp_deps.dir\build.make CMakeFiles/main_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles --progress-num= "Built target main_autogen_timestamp_deps"
+.PHONY : CMakeFiles/main_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/main_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles 0
+.PHONY : CMakeFiles/main_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+main_autogen_timestamp_deps: CMakeFiles/main_autogen_timestamp_deps.dir/rule
+.PHONY : main_autogen_timestamp_deps
+
+# clean rule for target.
+CMakeFiles/main_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen_timestamp_deps.dir\build.make CMakeFiles/main_autogen_timestamp_deps.dir/clean
+.PHONY : CMakeFiles/main_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/main_autogen.dir
+
+# All Build rule for target.
+CMakeFiles/main_autogen.dir/all: CMakeFiles/main_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen.dir\build.make CMakeFiles/main_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen.dir\build.make CMakeFiles/main_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles --progress-num=12 "Built target main_autogen"
+.PHONY : CMakeFiles/main_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/main_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Projects\Cpp\Design\cmake-build-debug-qt_mingw\CMakeFiles 0
+.PHONY : CMakeFiles/main_autogen.dir/rule
+
+# Convenience name for target.
+main_autogen: CMakeFiles/main_autogen.dir/rule
+.PHONY : main_autogen
+
+# clean rule for target.
+CMakeFiles/main_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_autogen.dir\build.make CMakeFiles/main_autogen.dir/clean
+.PHONY : CMakeFiles/main_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

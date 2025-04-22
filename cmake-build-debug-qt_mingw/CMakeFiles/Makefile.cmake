@@ -198,6 +198,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/Design_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/main_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/deploy_Design_ce70397fc3.cmake"
   ".qt/QtDeployTargets.cmake"
@@ -208,6 +209,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Design.dir/DependInfo.cmake"
+  "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/Design_autogen_timestamp_deps.dir/DependInfo.cmake"
   "CMakeFiles/Design_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/main_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/main_autogen.dir/DependInfo.cmake"
   )
