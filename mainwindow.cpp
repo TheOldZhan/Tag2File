@@ -482,5 +482,3 @@ void MainWindow::onRightSelectionChanged(const QItemSelection& selected, const Q
         ui->RecordedFiles->selectionModel()->clearSelection();
     }
 }
-
-
