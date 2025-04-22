@@ -173,7 +173,7 @@
    <widget class="QPushButton" name="OpenFileBT">
     <property name="geometry">
      <rect>
-      <x>1170</x>
+      <x>1180</x>
       <y>80</y>
       <width>51</width>
       <height>51</height>
@@ -239,7 +239,7 @@
    <widget class="QPushButton" name="ClearRBT">
     <property name="geometry">
      <rect>
-      <x>1110</x>
+      <x>1120</x>
       <y>80</y>
       <width>51</width>
       <height>51</height>

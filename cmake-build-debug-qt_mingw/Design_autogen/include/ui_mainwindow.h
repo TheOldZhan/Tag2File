@@ -97,7 +97,7 @@ public:
         ClearLBT->setIconSize(QSize(24, 24));
         OpenFileBT = new QPushButton(centralwidget);
         OpenFileBT->setObjectName("OpenFileBT");
-        OpenFileBT->setGeometry(QRect(1170, 80, 51, 51));
+        OpenFileBT->setGeometry(QRect(1180, 80, 51, 51));
         QIcon icon3(QIcon::fromTheme(QIcon::ThemeIcon::FolderOpen));
         OpenFileBT->setIcon(icon3);
         OpenFileBT->setIconSize(QSize(24, 24));
@@ -115,7 +115,7 @@ public:
         DeleteSelectedItem->setIconSize(QSize(24, 24));
         ClearRBT = new QPushButton(centralwidget);
         ClearRBT->setObjectName("ClearRBT");
-        ClearRBT->setGeometry(QRect(1110, 80, 51, 51));
+        ClearRBT->setGeometry(QRect(1120, 80, 51, 51));
         ClearRBT->setIcon(icon2);
         ClearRBT->setIconSize(QSize(24, 24));
         MainWindow->setCentralWidget(centralwidget);
