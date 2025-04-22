@@ -1,0 +1,101 @@
+@startuml
+
+class Datetime {
+  - QString date
+  - QString t
+  + Datetime(bool cond)
+  + QString getDate()
+  + QString getTime()
+  + QString getAddedDatetime()
+  + void setDateTimeFromString(...)
+}
+class Ui_MainWindow
+{
+    QWidget *centralwidget;
+    QListView *RecordedFiles;
+    QListView *FilteredFiles;
+    QPushButton *SearchStart;
+    QCheckBox *FuzzySearchMode;
+    QComboBox *SearchContent;
+    QPlainTextEdit *plainTextEdit;
+    QPushButton *BrowseBT;
+    QPushButton *ClearBT;
+    QPushButton *OpenFileBT;
+    QMenuBar *menubar;
+    QStatusBar *statusbar;
+}
+
+class FileInfo {
+  - QString name
+  - QString path
+  - QString type
+  - QList<QString> tag
+  + FileInfo()
+  + FileInfo(QString p)
+  + QString getName()
+  + QString getPath()
+  + QString getType()
+  + QList<QString> getTags()
+  + void addTag(QString t)
+  + bool isTagExist(QString t)
+  + QJsonObject toJson()
+  + FileInfo fromJson(QJsonObject json)
+}
+
+class MainWindow{
+  - 变量\/
+  - Q_OBJECT
+  - Ui::MainWindow* ui;
+  - vector<FileInfo> fileList
+  - QMenu* listContextMenu;
+  - QAction* addTagAction;
+  - QString currentSelectedPath;
+
+  功能函数(\/)
+  + MainWindow(QWidget* parent = nullptr);
+  + ~MainWindow() override;
+  + void Add2leftList(FileInfo& info) const;
+  + void AddVec2LeftList(vector<QString>& s);
+  + void Add2rightList(const QString& displayText, const QString& filePath) const;
+  + void saveToJson() const;
+  + void RemoveAFile(const QString& s);
+  + void SearchTargetFiles();
+  + void showListContextMenu(const QPoint& pos);
+  + void RemoveLAll();
+  + void RemoveRAll();
+  + void openAFile(const QModelIndex& index);
+  事件函数(\/)
+  + void onBrowseButtonClicked();
+  + void onAddButtonClicked();
+  + void onClearLButtonClicked();
+  + void onDeleteSelectedButtonClicked();
+  + void onClearRButtonClicked();
+  + void onOpenFileOnExplorerButtonClicked();
+  + void onSearchButtonClicked();
+  + void openFileOnExplorer(const QModelIndex& index);
+  + void onAddTagClicked();
+  + void onLeftSelectionChanged(...);
+  + void onRightSelectionChanged(...);
+}
+
+MainWindow ..> QStandardItemModel : 使用模型显示数据
+MainWindow ..> QListView : 显示列表
+Datetime <|-- FileInfo : 继承
+MainWindow --|> Ui_MainWindow : 继承
+MainWindow o-- FileInfo : 包含文件信息
+
+note right of FileInfo::getTags()
+  返回标签列表，用于搜索功能
+end note
+
+note left of MainWindow::saveToJson()
+  保存数据到USERDATA
+end note
+
+note left of MainWindow::SearchTargetFiles()
+  按文件名或标签进行搜索
+  支持模糊/精确模式
+end note
+
+
+@enduml
